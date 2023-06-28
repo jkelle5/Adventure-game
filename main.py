@@ -2,6 +2,8 @@ import sys
 import time
 import os
 import random
+from weapons import Sword, Scalpel, Weapon
+from inventory import inventory
 
 begin = input("Adventure Game \nStart or Leave\n").lower().strip()
 
@@ -25,14 +27,7 @@ if begin == "start":
 
             pass
 
-    def createweapon():
-        weapon = weapons("scalpel", 2, 1)
-        print(weapon)
-    #def scalpel(weapons):
-        #name = "Scalpel"
-        #value = 2
-        #damage = 1
-#scalpel = "scalpel",2,1
+            
 
     print("\nAdventure Game\n\n\nThe world has become a desolate place\nA land Divided\nAnd a newcomer has found their "
           "way into this broken world.\n")
@@ -65,9 +60,8 @@ if begin == "start":
                 c2_3 = "0"
                 if c2_1 == "take scalpel":
                     print("\nYou now have a scalpel.\n")
-                    createweapon()
-                    print(weapons.name)
-                    c2_2 = "1"
+                    scalpel = Weapon.createweapon(Scalpel,5,45)
+                    inventory.add_weapon(scalpel)
                 elif c2_1 == "inject myself":
                     print("You stick the needle of the syringe into your thigh and press down on the plunger. As you\n"
                           "do you feel an intense burning radiating out from the injection point to the rest of your\n"
