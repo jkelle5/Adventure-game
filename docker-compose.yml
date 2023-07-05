@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  
+  #DB build
+  database:
+    
+    environment: 
+      POSTGRES_USER: Asearl
+      POSTGRES_PASSWORD: Type2Play
+      POSTGRES_DB: AdventureGame
+    image: 'postgres:latest'
+    container_name: AdventureGame
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      #- postgres_data:/var/lib/postgresql/data/
+      - ./db-data/:/var/lib/postgresql/data=rwx/

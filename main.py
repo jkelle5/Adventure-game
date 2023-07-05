@@ -5,6 +5,7 @@ import random
 from weapons import Sword, Scalpel, Weapon
 from inventory import inventory
 
+
 begin = input("Adventure Game \nStart or Leave\n").lower().strip()
 
 if begin == "start":
@@ -16,18 +17,6 @@ if begin == "start":
             self.quantity = quantity
 
         pass
-
-
-    class weapons:
-        def __init__(self, name, value, damage, quantity=1):
-            self.name = name
-            self.value = value
-            self.damage = damage
-            self.quantity = quantity
-
-            pass
-
-            
 
     print("\nAdventure Game\n\n\nThe world has become a desolate place\nA land Divided\nAnd a newcomer has found their "
           "way into this broken world.\n")
@@ -80,3 +69,4 @@ if begin == "start":
         print("\n\nYOU HAVE DIED\n\nGame Over")
 else:
     print("Goodbye")
+

@@ -1,6 +1,7 @@
 
 
 #Define classes for each weapon with predefined attributes. 
+
 #Define more as needed
 class Weapon:
     def __init__(self, name, damage, durability):
